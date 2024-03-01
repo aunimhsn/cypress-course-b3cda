@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Caesar Cypher</title>
+</head>
+<body class="antialiased bg-gray-200 min-h-screen" style="font-family: 'Poppins';">
+    <div class="flex flex-col h-screen items-center justify-center">      
+        <div class="bg-white p-8 shadow-md">
+            <!-- Title -->
+            <h1 class="text-lg font-extrabold mt-2">Caesar Cypher</h1>
+            <h2 class="text-sm text-gray-400 mb-8">Vanilla JS</h1>
+
+            <!-- Form -->
+            <form class="flex flex-col">
+                <label for="cypher-key" class="text-sm mb-1">Cypher key</label>
+                <input type="number" 
+                       min="1" 
+                       max="25" 
+                       value="1" 
+                       name="cypher-key" 
+                       class="mb-4 bg-gray-200 px-4 py-2 focus:outline-none text-sm" 
+                       required
+                       data-cy="cypher-key"
+                />
+
+                <textarea class="bg-gray-200 w-64 mb-4 resize-none h-32 focus:outline-none p-4 text-sm" placeholder="Enter a text to cypher..." data-cy="cypher-msg"></textarea>
+                
+                <button type="button" class="bg-blue-800 text-white py-6 focus:outline-none hover:bg-blue-600 transition ease-in-out" data-cy="cypher-btn">Cypher</button>
+            </form>
+
+            <!-- Result -->
+            <p id="result" class="mt-4 text-green-600" data-cy="cypher-result"></p>
+        </div>             
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

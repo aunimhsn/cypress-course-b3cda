@@ -2,7 +2,7 @@
 
 context('Hello World!', () => {
     beforeEach(() => {
-        cy.visit('../../app/index.html');
+        cy.visit('../../components/index.html');
     });
 
     it('p should have text Hello World!', () => {
